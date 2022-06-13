@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
+canvas {
+  background-image: url(./canvas-background.webp);
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #d9d9d9;
+}
