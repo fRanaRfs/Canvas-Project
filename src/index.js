@@ -3,10 +3,21 @@ const ctx = canvas.getContext("2d");
 
 
 let playerImg = new Image();
-playerImg.src = "src/player-plane.png";
-
+playerImg.src = "src/player.png";
 let obstaculoImagen = new Image();
-obstaculoImagen.src = "src/enemy-plane.png";
+obstaculoImagen.src = "src/meteor.png";
+let obstaculo2Imagen = new Image();
+obstaculo2Imagen.src = "src/meteor2.png"
+
+
+let gameOver1 = document.getElementById("gameOver"); 
+
+let animacionDeJugar
+
+function gameOver() {
+  gameOver1.style.display = 'block';
+  clearInterval(animacionDeJugar);
+}
 
 const obstaculos = [];
 
@@ -18,16 +29,31 @@ const jugar = () => {
     obstaculo.y -= 5;
     obstaculo.dibujar();
     if (player.detectarColision(obstaculo)) {
-      //alert('Game Over');
+      gameOver();
     }
   }
+};
+
+
+
+const crearObstaculos2 = () => {
+  const randomPositionX = Math.floor(Math.random() * 280);
+  const obstaculo = new Objeto(
+    randomPositionX,
+    770,
+    70,
+    80,
+    obstaculo2Imagen,
+    ctx
+  );
+  obstaculos.push(obstaculo);
 };
 
 const crearObstaculos = () => {
   const randomPositionX = Math.floor(Math.random() * 480);
   const obstaculo = new Objeto(
     randomPositionX,
-    670,
+    770,
     70,
     90,
     obstaculoImagen,
@@ -38,12 +64,14 @@ const crearObstaculos = () => {
 
 const screenLoad = () => {
   player.dibujar();
-  setInterval(jugar, 100);
-  setInterval(crearObstaculos, 5000);
+  animacionDeJugar = setInterval(jugar, 50);
+  setInterval(crearObstaculos, 3500);
+  setInterval(crearObstaculos2, 6000)
 };
 
 const moverPlayer = (e) => {
   player.borrar();
+  
   if (e.key === "ArrowLeft") {
     player.x -= 5;
   }
@@ -56,9 +84,7 @@ const moverPlayer = (e) => {
   if (e.key === "ArrowDown") {
     player.y += 5;
   }
-  if (e.key === "Space"){
-    disparo = true;
-  } console.log("Disparo")
+  
   player.dibujar();
 };
 
