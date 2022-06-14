@@ -8,12 +8,20 @@ canvas {
 #gameOver {
 
   position: absolute;
-  top: 150px;
+  top: 80px;
   right: 410px;
   display:none;
 
 }
 
+#reset {
+
+  position: absolute;
+  top: 640px;
+  right: 730px;
+  display:none;
+
+}
 
 
 

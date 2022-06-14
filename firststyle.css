@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+
+canvas {
+    background-image: url(src/canvas-background.webp);
+    margin: 0 auto;
+    display: flex;
+    border: 2px solid #820202;
+  }
+
+  #keys {
+
+    position: absolute;
+    display: block;
+    top: 300px;
+    right: 600px;
+
+  }
+
+
+#start {
+   
+    position: absolute;
+    display: block;
+    top: 600px;
+    right: 610px;
+}
+
+#title{
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    display: block;
+    top: 70px;
+    right: 650px;
+    color: rgba(218, 148, 10, 0.832);
+    text-align: justify;
+}
+
+#instrucciones {
+
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    display:block;
+    top: 200px;
+    right: 520px;
+    color: rgba(255, 255, 255, 0.832);    
+    
+}
+
+#instrucciones2 {
+
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    display:block;
+    top: 250px;
+    right: 560px;
+    color: rgba(255, 255, 255, 0.832);  
+
+}
+

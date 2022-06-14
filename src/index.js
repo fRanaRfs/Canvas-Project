@@ -10,13 +10,17 @@ let obstaculo2Imagen = new Image();
 obstaculo2Imagen.src = "src/meteor2.png"
 
 
-let gameOver1 = document.getElementById("gameOver"); 
+let gameOver1 = document.getElementById("gameOver");
+let reset = document.getElementById("reset")
 
 let animacionDeJugar
+let animacionDeJugar2
 
 function gameOver() {
   gameOver1.style.display = 'block';
-  clearInterval(animacionDeJugar);
+  reset.style.display = 'block';
+  clearInterval(animacionDeJugar)
+  clearInterval(animacionDeJugar2);
 }
 
 const obstaculos = [];
@@ -41,7 +45,7 @@ const crearObstaculos2 = () => {
   const obstaculo = new Objeto(
     randomPositionX,
     770,
-    70,
+    60,
     80,
     obstaculo2Imagen,
     ctx
@@ -54,7 +58,7 @@ const crearObstaculos = () => {
   const obstaculo = new Objeto(
     randomPositionX,
     770,
-    70,
+    60,
     90,
     obstaculoImagen,
     ctx
@@ -64,7 +68,7 @@ const crearObstaculos = () => {
 
 const screenLoad = () => {
   player.dibujar();
-  animacionDeJugar = setInterval(jugar, 50);
+  animacionDeJugar, animacionDeJugar2 = setInterval(jugar, 50);
   setInterval(crearObstaculos, 3500);
   setInterval(crearObstaculos2, 6000)
 };
