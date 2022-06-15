@@ -68,7 +68,7 @@ const crearObstaculos = () => {
 
 const screenLoad = () => {
   player.dibujar();
-  animacionDeJugar, animacionDeJugar2 = setInterval(jugar, 50);
+  animacionDeJugar, animacionDeJugar2 = setInterval(jugar, 20);
   setInterval(crearObstaculos, 3500);
   setInterval(crearObstaculos2, 6000)
 };
