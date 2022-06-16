@@ -13,12 +13,22 @@ obstaculo3Imagen.src = "src/llave.png"
 let obstaculo4Imagen = new Image();
 obstaculo4Imagen.src = "src/IH.png"
 
-
+let win = document.getElementById("win")
 let gameOver1 = document.getElementById("gameOver");
 let reset = document.getElementById("reset");
 
 let animacionDeJugar
 let animacionDeJugar2
+let animacionDeJugar3
+
+function gameWin () {
+
+    reset.style.display = 'block';
+    win.style.display = 'block';
+    clearInterval(animacionDeJugar2);
+    clearInterval(animacionDeJugar3);
+   
+}
 
 function gameOver() {
   gameOver1.style.display = 'block';
@@ -34,6 +44,7 @@ let ironhackArr = [];
 const player = new Objeto(250, 0, 90, 90, playerImg, ctx);
 
 const jugar = () => {
+  
   for (let obstaculo of obstaculos) {
     obstaculo.borrar();
     obstaculo.y -= 5;
@@ -64,7 +75,9 @@ const jugar = () => {
       iron.borrar();
     }
   }
-
+  if (scores >= 3000) {
+    gameWin();
+  } 
 };  
 
 const crearObstaculos4 = () => {

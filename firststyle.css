@@ -58,3 +58,16 @@ canvas {
 
 }
 
+#instrucciones3 {
+
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    display:block;
+    top: 460px;
+    right: 510px;
+    color: rgba(255, 255, 255, 0.832);  
+    text-decoration:overline;
+    
+
+}
+

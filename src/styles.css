@@ -14,6 +14,15 @@ canvas {
 
 }
 
+#win {
+
+  position: absolute;
+  top: 150px;
+  right: 390px;
+  display:none;
+
+}
+
 #reset {
 
   position: absolute;
