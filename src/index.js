@@ -9,9 +9,9 @@ obstaculoImagen.src = "src/meteor.png";
 let obstaculo2Imagen = new Image();
 obstaculo2Imagen.src = "src/meteor2.png"
 let obstaculo3Imagen = new Image();
-obstaculo3Imagen.src = "/src/llave.png"
+obstaculo3Imagen.src = "src/llave.png"
 let obstaculo4Imagen = new Image();
-obstaculo4Imagen.src = "/src/IH.png"
+obstaculo4Imagen.src = "src/IH.png"
 
 
 let gameOver1 = document.getElementById("gameOver");
@@ -155,15 +155,7 @@ let scoreEl = document.getElementById("setscorenum");
 let scores = 0;
 
 
-/* function scoreNum () {
 
-  if (player.detectarColision(crearObstaculos3)){
-    scores += 100;
-    scoreEl.innerHTML = scores
-    console.log("scoreNum")
-  } 
-  
-  } */
   
 
 window.addEventListener("load", screenLoad);
