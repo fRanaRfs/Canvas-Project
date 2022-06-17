@@ -69,7 +69,7 @@ const jugar = () => {
     iron.y -= 5;
     iron.dibujar();
     if (player.detectarColision(iron)) {
-      scores += 1000;
+      scores += 500;
       scoreEl.innerHTML = scores
       ironhackArr.shift();
       iron.borrar();
