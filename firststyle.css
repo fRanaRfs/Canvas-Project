@@ -5,71 +5,56 @@ canvas {
     background-image: url(./src/canvas-background.webp);
     margin: 0 auto;
     display: flex;
+    float: right;
     border: 2px solid #820202;
   }
 
-  #keys {
+  
 
-    position: absolute;
-    display: block;
-    top: 300px;
-    right: 600px;
-
-  }
-
-
-#start {
-   
-    position: absolute;
-    display: block;
-    top: 600px;
-    right: 610px;
+.container{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 
-#title{
-    font-family: 'Orbitron', sans-serif;
-    position: absolute;
-    display: block;
-    top: 70px;
-    right: 650px;
-    color: rgba(218, 148, 10, 0.832);
-    text-align: justify;
+.landing{
+  background-image: url(./src/canvas-background.webp);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  border: #820202 solid 3px;
+  color: white;
 }
 
-#instrucciones {
-
-    font-family: 'Orbitron', sans-serif;
-    position: absolute;
-    display:block;
-    top: 200px;
-    right: 520px;
-    color: rgba(255, 255, 255, 0.832);    
-    
+.landing h1{
+  color:rgb(212, 120, 8);
 }
 
-#instrucciones2 {
-
-    font-family: 'Orbitron', sans-serif;
-    position: absolute;
-    display:block;
-    top: 250px;
-    right: 560px;
-    color: rgba(255, 255, 255, 0.832);  
-
+.landing h3{
+  text-align: justify;
+  
 }
 
-#instrucciones3 {
-
-    font-family: 'Orbitron', sans-serif;
-    position: absolute;
-    display:block;
-    top: 460px;
-    right: 510px;
-    color: rgba(255, 255, 255, 0.832);  
-    text-decoration:overline;
-    
-
+.landing img{
+  width: 200px;
+  height: 200px;
 }
 
+footer{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  
+  
+}
+
+footer img{
+  width: 50px;
+  height: 50px;
+}
 
 

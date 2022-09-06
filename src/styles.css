@@ -34,10 +34,11 @@ canvas {
 
 #setscore {
 
-  color: white;
-  position: absolute;
-  top: 20px;
-  right: 980px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   
   
 }
@@ -45,9 +46,10 @@ canvas {
 #setscorenum {
 
   color: white;
-  position: absolute;
-  top: 20px;
-  right: 940px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   
 
 }
